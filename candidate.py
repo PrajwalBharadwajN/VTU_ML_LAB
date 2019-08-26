@@ -37,7 +37,8 @@ for i in range(len(a)):
         for j in range(n):
              if s[j]!=a[i][j] and s[j]!='?': 
                  g[j]=s[j]
-                 temp.append(g) 
+                 if g not in temp:
+                  temp.append(g) 
                  g= ['?']*n
 
     print("\n For Training Example No :{0} the hypothesis is S{0} ".format(i+1),s)
