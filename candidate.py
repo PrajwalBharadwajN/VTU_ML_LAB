@@ -29,7 +29,7 @@ for i in range(len(a)):
             if a[i][j]!=s[j]:
                 s[j]='?'
         for j in range(n):
-            for k in range(len(temp)):
+            for k in range(len(temp)):  #Use len(temp)-1 for manufacture.csv
                 if temp[k][j]!='?' and temp[k][j]!=s[j]:
                     del temp[k] 
         
