@@ -7,7 +7,7 @@ Created on Mon Aug 19 14:13:33 2019
 
 import csv
 a=[]
-with open('finds.csv')as trainData:
+with open('dataset.csv')as trainData:
     for row in csv.reader(trainData):
         a.append(row)
         print(row)
