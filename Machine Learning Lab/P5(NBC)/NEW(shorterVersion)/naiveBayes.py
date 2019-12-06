@@ -16,10 +16,10 @@ def calculate_priori():
    
 def get_cp(attr, attr_type, class_value):
         data_attr = list(data[attr])
-        total =1
+        total = 0
         for i in range(0, len(data_attr)):
             if class_data[i] == class_value and data_attr[i] == attr_type:
-                total+=1
+                 total+=1
         return total/float(class_data.count(class_value))
 
 def calculate_conditional_probabilities(hypothesis):
@@ -42,12 +42,12 @@ print("Class Attribute:", class_attr)
 class_data =  list(data[class_attr])
 priori,cp={},{}
 calculate_priori()
-hypothesis = {"Outlook":'Sunny', "Temperature":"Mild", "Humidity":'Normal' , "Windy":'False'}
+hypothesis = {"Outlook":'Sunny', "Temperature":"Cool", "Humidity":'High' , "Windy":'Strong'}
 print(hypothesis)
 calculate_conditional_probabilities(hypothesis)
 classify()
 print("-------------------------------------------------------")
-hypothesis = {"Outlook":'Overcast', "Temperature":"Cool", "Humidity":'High' , "Windy":'True'}
+hypothesis = {"Outlook":'Overcast', "Temperature":"Mild", "Humidity":'Normal' , "Windy":'Weak'}
 print(hypothesis)
 calculate_conditional_probabilities(hypothesis)
 classify()
