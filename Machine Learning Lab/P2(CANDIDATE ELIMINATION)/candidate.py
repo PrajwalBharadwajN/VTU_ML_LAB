@@ -2,12 +2,19 @@
 """
 @author: Prajwal Bharadwaj N
 """
+'''
 import csv
-a = []
-with open('enjoySport.csv', 'r') as trainData:
+a=[]
+with open('enjoysport.csv')as trainData:
     for row in csv.reader(trainData):
         a.append(row)
         print(row)
+'''
+
+import pandas as pd
+df = pd.read_csv('enjoysport.csv',header=None)
+a = df.values.tolist()
+print(df)
 n=len(a[0])-1
 
 print("\n The initial value of hypothesis: ")
