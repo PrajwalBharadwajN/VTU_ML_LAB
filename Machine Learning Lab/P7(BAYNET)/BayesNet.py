@@ -1,9 +1,5 @@
-names = "A,B,C,D,E,F,G,H,I,J,K,L,M,RESULT"
-names = names.split(",")
-print(names)
-
 import pandas as pd
-data = pd.read_csv("datasetheart.csv",names = names)
+data = pd.read_csv("datasetheart.csv",names = ['A','B','C','D','E','F','G','H','I','J','K','L','M','RESULT'])
 print(data.head(5))
 print(data.tail(5))
 
